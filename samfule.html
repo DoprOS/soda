@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* Шапка */
+header{
+    background:#1e3a8a;
+    color:white;
+    padding:20px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+/* Меню */
+nav{
+    margin-top:15px;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+}
+
+.menu li{
+    position:relative;
+}
+
+.menu li a{
+    display:block;
+    padding:15px 20px;
+    color:white;
+    text-decoration:none;
+}
+
+.menu li:hover{
+    background:#2563eb;
+}
+
+/* Выпадающее меню */
+.dropdown{
+    display:none;
+    position:absolute;
+    background:#2563eb;
+    min-width:180px;
+    top:100%;
+    left:0;
+}
+
+.dropdown li{
+    width:100%;
+}
+
+.menu li:hover .dropdown{
+    display:block;
+}
+
+/* Главный экран */
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:white;
+}
+
+.hero img{
+    width:80%;
+    max-width:800px;
+    border-radius:10px;
+}
+
+.hero h1{
+    margin:20px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#1e3a8a;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#2563eb;
+}
+
+/* Контент */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    flex:1;
+    min-width:250px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* Подвал */
+footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">⚡ TechStore</div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Главная</a></li>
+
+            <li>
+                <a href="#">Каталог ▼</a>
+                <ul class="dropdown">
+                    <li><a href="#">Ноутбуки</a></li>
+                    <li><a href="#">Смартфоны</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Добро пожаловать в TechStore</h1>
+    <p>Современный магазин электроники и цифровых технологий</p>
+
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+         alt="Технологии">
+
+    <br>
+    <a href="#" class="btn">Перейти в каталог</a>
+</section>
+
+<div class="container">
+    <h2>Популярные товары</h2>
+    <br>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+                 alt="Ноутбук">
+            <h3>Ноутбуки</h3>
+            <p>Мощные решения для работы, учебы и игр.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+                 alt="Смартфон">
+            <h3>Смартфоны</h3>
+            <p>Новейшие модели от популярных брендов.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                 alt="Наушники">
+            <h3>Аксессуары</h3>
+            <p>Наушники, зарядные устройства и многое другое.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 TechStore. Все права защищены.</p>
+    <p>Email: info@techstore.ru | Телефон: +7 (999) 123-45-67</p>
+</footer>
+
+</body>
+</html>
